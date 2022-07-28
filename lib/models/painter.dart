@@ -11,10 +11,6 @@ class ThePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     try {
-      // print('offsets: $offsets');
-      // print('colors: $colors');
-      // print('comments: $comments');
-
       const double radius = 1;
       final paint = Paint()
         ..color = Color.fromRGBO(143, 148, 251, 0.5)
@@ -29,7 +25,6 @@ class ThePainter extends CustomPainter {
         ..color = Color.fromRGBO(143, 148, 251, 0.5)
         ..strokeWidth = 5
         ..style = PaintingStyle.stroke;
-
 
       if (angles[0] == 0) {
         canvas.drawLine(

@@ -32,8 +32,6 @@ class _ExerciseDemoScreenState extends State<ExerciseDemoScreen> {
         title,
       ),
     );
-    // final double height = MediaQuery.of(context).size.height;
-    // final double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: appBar,
       body: SingleChildScrollView(child: Demo(exerciseId: exerciseId)),

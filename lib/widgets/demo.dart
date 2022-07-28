@@ -1,14 +1,8 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:my_pt/providers/exercise_video_data.dart';
-import 'package:my_pt/screens/exercise_demo_screen.dart';
 import 'package:my_pt/screens/loading_screen.dart';
 import 'package:my_pt/value_notifiers/value_notifiers.dart';
 import 'package:my_pt/widgets/pullet.dart';
-import 'package:provider/provider.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:video_player/video_player.dart';
-import 'package:flutter_video_info/flutter_video_info.dart';
 
 class Demo extends StatefulWidget {
   static const routeName = '/demo';
@@ -29,7 +23,6 @@ class _DemoState extends State<Demo> {
     _file = await _picker.pickVideo(
         source: source, maxDuration: const Duration(seconds: 10));
     videoPath.value = _file!.path;
-    // await videoInfo();
     if (_file != null) {
       Navigator.of(context).push(
         MaterialPageRoute<void>(
@@ -39,20 +32,8 @@ class _DemoState extends State<Demo> {
     }
   }
 
-  Future<void> videoInfo() async {
-    final videoInfo = FlutterVideoInfo();
-
-    String videoFilePath = videoPath.value;
-    // var info = await videoInfo.getVideoInfo(videoFilePath);
-    // print('framerate: ${info!.framerate}');
-    // print('suration: ${info.duration}');
-    // print('width: ${info.width}');
-    // print('height: ${info.height}');
-  }
-
   @override
   Widget build(BuildContext context) {
-    final videoData = Provider.of<ExcerciseVideoData>(context, listen: false);
     final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
     return SingleChildScrollView(
@@ -63,7 +44,6 @@ class _DemoState extends State<Demo> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             SizedBox(
-              // height: height * 0.5,
               child: Stack(
                 children: [
                   if (widget.exerciseId == 'w4')
@@ -78,7 +58,6 @@ class _DemoState extends State<Demo> {
                     Image.asset('images/deep_squat_demo.gif',
                         fit: BoxFit.scaleDown),
                   Container(
-                    // height: height,
                     color: Color.fromRGBO(0, 0, 0, .5),
                   )
                 ],
@@ -89,13 +68,6 @@ class _DemoState extends State<Demo> {
               width: width,
               child: Column(
                 children: [
-                  // Container(
-                  //   margin: EdgeInsets.only(left: 20, right: 20, top: 20, bottom: 10),
-
-                  //   alignment: Alignment.topLeft,
-                  //   child: const Text('INSTRUCTIONS',
-                  //       style: TextStyle(fontWeight: FontWeight.bold)),
-                  // ),
                   Pullet(text: 'PLACE THE PHONE ABOUT 2M FAR.', width: width),
                   Pullet(
                       text: 'FACE YOUR SIDE VIEW TO THE CAMERA.', width: width),
@@ -162,7 +134,6 @@ class _DemoState extends State<Demo> {
                                     fontWeight: FontWeight.bold),
                               ),
                               onPressed: () async {
-                                // videoData.getStatus();
                                 _onImageButtonPressed(ImageSource.gallery,
                                     height, width, context);
                               }),

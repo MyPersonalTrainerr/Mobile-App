@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 ValueNotifier<bool> drawing = ValueNotifier(false);
-// ValueNotifier<List> jsonData = ValueNotifier([]);
 ValueNotifier<List<Offset>> frame = ValueNotifier([]);
 ValueNotifier<List<dynamic>> angles = ValueNotifier([]);
 ValueNotifier<List<dynamic>> positions = ValueNotifier([]);

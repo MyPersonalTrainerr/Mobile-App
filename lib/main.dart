@@ -35,15 +35,17 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             title: 'Your Personal Trainer',
             theme: ThemeData(
-              snackBarTheme: const SnackBarThemeData(backgroundColor: Color.fromRGBO(143, 148, 251, .6),),
+              snackBarTheme: const SnackBarThemeData(
+                backgroundColor: Color.fromRGBO(143, 148, 251, .6),
+              ),
               dialogTheme: const DialogTheme(
                 backgroundColor: Color.fromRGBO(143, 148, 251, 1),
                 elevation: 5,
-                titleTextStyle: TextStyle(fontSize: 19,
-                fontFamily: 'Raleway',
-                fontWeight: FontWeight.bold),
+                titleTextStyle: TextStyle(
+                    fontSize: 19,
+                    fontFamily: 'Raleway',
+                    fontWeight: FontWeight.bold),
               ),
-              // brightness: Brightness.dark,
               drawerTheme: const DrawerThemeData(
                 backgroundColor: Color.fromRGBO(143, 148, 251, .2),
               ),
@@ -63,19 +65,17 @@ class MyApp extends StatelessWidget {
                     fontSize: 21,
                     fontFamily: 'Raleway',
                   )),
-              scaffoldBackgroundColor: Color.fromRGBO(143, 148, 251, .2),
-              backgroundColor: Color.fromRGBO(143, 148, 251, .2),
-              // Color.fromRGBO(143, 148, 251, 1),
-              //                       Color.fromRGBO(143, 148, 251, .6),
+              scaffoldBackgroundColor: const Color.fromRGBO(143, 148, 251, .2),
+              backgroundColor: const Color.fromRGBO(143, 148, 251, .2),
               colorScheme: ColorScheme.fromSwatch().copyWith(
-                primary: Color.fromRGBO(143, 148, 251, .2),
+                primary: const Color.fromRGBO(143, 148, 251, .2),
                 // brightness: Brightness.dark,
-                secondary: Color.fromRGBO(143, 148, 251, .2),
+                secondary: const Color.fromRGBO(143, 148, 251, .2),
               ),
             ),
-            home: authData.isAuth ? ExersicesOverviewScreen() : AuthScreen(),
+            // home: authData.isAuth ? ExersicesOverviewScreen() : AuthScreen(),
             // home: ExersicesOverviewScreen(),
-            // home: Videoo(),
+            home: Videoo(),
             // home: MySpecificPage(),
             // home: Painter(),
             routes: {

@@ -36,8 +36,6 @@ dependencies:
   http:
   email_validator:
   video_player: 
-  flutter_video_info: ^1.2.0
-
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -72,10 +70,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - images/
-    # - E:/Flutter/Projects/my_pt/Backend_m/env/Backend/MyPersonalTrainer/Points.json
     - E:/Flutter/Projects/my_pt/Backend/env/Backend/MyPersonalTrainer/Points.json
-    - E:/Flutter/Projects/my_pt/image_picker2812132808523334357.mp4
-    - E:/Flutter/Projects/my_pt/test.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

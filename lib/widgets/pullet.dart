@@ -9,7 +9,6 @@ class Pullet extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: width,
-      // margin: EdgeInsets.only(top: 5, bottom: 5),
       child: Row(
         children: [
           Padding(

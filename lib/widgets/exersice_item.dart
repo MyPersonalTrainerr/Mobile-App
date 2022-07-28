@@ -5,6 +5,8 @@ import 'package:my_pt/widgets/exercise_item_content.dart';
 import 'package:provider/provider.dart';
 
 class ExerciseItem extends StatelessWidget {
+  const ExerciseItem({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final exerciseData = Provider.of<Exercise>(context, listen: false);

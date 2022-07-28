@@ -6,20 +6,5 @@ class Error {
       content: Text(errorMsg),
     );
     ScaffoldMessenger.of(context).showSnackBar(snackBar);
-    // showDialog(
-    //   context: context,
-    //   builder: (context) => AlertDialog(
-    //     title: Text('An error Ocuured!'),
-    //     content: Text(errorMsg),
-    //     actions: <Widget>[
-    //       ElevatedButton(
-    //         onPressed: () {
-    //           Navigator.of(context).pop();
-    //         },
-    //         child: Text('okay'),
-    // ),
-    // ],
-    // ),
-    // );
   }
 }

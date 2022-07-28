@@ -23,17 +23,12 @@ class _PainterWidgetState extends State<PainterWidget> {
   @override
   Widget build(BuildContext context) {
     print('im here');
-    // final double height = MediaQuery.of(context).size.height;
-    // final double width = MediaQuery.of(context).size.width;
     return ValueListenableBuilder(
       valueListenable: frame,
       builder: (BuildContext context, List<Offset> _frame, __) {
         if (drawing.value) {
           return CustomPaint(
-            child: Container(
-                // width: widget.width,
-                // height: widget.height,
-                ),
+            child: Container(),
             painter: ThePainter(
                 _frame, angles.value, positions.value, comments.value),
           );

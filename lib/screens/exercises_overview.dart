@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_pt/providers/exercises_provider.dart';
-import 'package:my_pt/widgets/app_drawer.dart';
 import 'package:my_pt/widgets/exersice_item.dart';
-import 'package:my_pt/widgets/lower_bar.dart';
 import 'package:provider/provider.dart';
 
 class ExersicesOverviewScreen extends StatelessWidget {
@@ -17,8 +15,6 @@ class ExersicesOverviewScreen extends StatelessWidget {
     final double height =
         MediaQuery.of(context).size.height - AppBar().preferredSize.height - 66;
     final double width = MediaQuery.of(context).size.width;
-    // print(height);
-    // print(heightt);
     return Scaffold(
       appBar: AppBar(
         title: const Text('YOUR PERSONAL TRAINER'),

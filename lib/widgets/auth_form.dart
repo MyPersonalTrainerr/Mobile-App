@@ -117,7 +117,6 @@ class _AuthFormState extends State<AuthForm> {
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
-    final double width = MediaQuery.of(context).size.width;
 
     return Form(
       key: _formKey,
@@ -128,36 +127,15 @@ class _AuthFormState extends State<AuthForm> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Container(
-                // decoration: const BoxDecoration(
-                //     image: DecorationImage(
-                //         image: AssetImage('images/background.png'),
-                //         fit: BoxFit.fill)),
                 child: Stack(
                   children: <Widget>[
-                    // Positioned(
-                    //     right: 40,
-                    //     top: 40,
-                    //     width: 80,
-                    //     height: 150,
-                    //     child:
-                    //         // FadeAnimation(
-                    //         //     1.5,
-                    //         Container(
-                    //       decoration: const BoxDecoration(
-                    //           image: DecorationImage(
-                    //               image: AssetImage('images/clock.png'))),
-                    //     )),
-                    // // ),
                     Positioned(
-                        child:
-                            // FadeAnimation(
-                            //     1.6,
-                            Container(
+                        child: Container(
                       margin: EdgeInsets.only(top: 10),
                       child: Center(
                         child: Text(
                           _authMode == AuthMode.login ? 'LOGIN' : 'SIGN UP',
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Colors.white,
                               fontSize: 40,
                               fontWeight: FontWeight.bold),
@@ -172,14 +150,12 @@ class _AuthFormState extends State<AuthForm> {
                 padding: EdgeInsets.all(30.0),
                 child: Column(
                   children: <Widget>[
-                    // FadeAnimation(
-                    //     1.8,
                     Container(
                         padding: EdgeInsets.all(5),
                         decoration: BoxDecoration(
                             // color: Colors.white,
                             borderRadius: BorderRadius.circular(10),
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                   color: Color.fromRGBO(143, 148, 251, .2),
                                   blurRadius: 20.0,
@@ -271,7 +247,6 @@ class _AuthFormState extends State<AuthForm> {
                                     ),
                                     hintStyle:
                                         TextStyle(color: Colors.grey[400])),
-                                // decoration: InputDecoration(labelText: 'Password'),
                                 obscureText: _passwordHidden,
                                 controller: _passwordController,
                                 validator: (value) {
@@ -319,8 +294,8 @@ class _AuthFormState extends State<AuthForm> {
                                           _passwordHidden
                                               ? Icons.visibility
                                               : Icons.visibility_off,
-                                          color:
-                                              Color.fromRGBO(143, 148, 251, .6),
+                                          color: const Color.fromRGBO(
+                                              143, 148, 251, .6),
                                         ),
                                       ),
                                       hintStyle:
@@ -344,24 +319,22 @@ class _AuthFormState extends State<AuthForm> {
                           ],
                           // ),
                         )),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                     if (_isLoading)
                       // FadeAnimation(
                       // 2,
-                      CircularProgressIndicator(
+                      const CircularProgressIndicator(
                         color: Color.fromRGBO(143, 148, 251, .6),
                       )
                     // )
                     else
-                      // FadeAnimation(
-                      //     2,
                       Container(
                           height: 50,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              gradient: LinearGradient(colors: [
+                              gradient: const LinearGradient(colors: [
                                 Color.fromRGBO(143, 148, 251, 1),
                                 Color.fromRGBO(143, 148, 251, .6),
                               ])),
@@ -371,7 +344,7 @@ class _AuthFormState extends State<AuthForm> {
                                 _authMode == AuthMode.login
                                     ? 'LOGIN'
                                     : 'SIGN UP',
-                                style: TextStyle(
+                                style: const TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold),
                               ),
@@ -379,16 +352,16 @@ class _AuthFormState extends State<AuthForm> {
                             ),
                             // ),
                           )),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
-                    // FadeAnimation(
-                    //     1.5,
                     TextButton(
                       child: Text(
-                        '${_authMode == AuthMode.login ? 'Create an account' : 'Have an account? login instead.'}',
-                        style:
-                            TextStyle(color: Color.fromRGBO(143, 148, 251, 1)),
+                        _authMode == AuthMode.login
+                            ? 'Create an account'
+                            : 'Have an account? login instead.',
+                        style: const TextStyle(
+                            color: Color.fromRGBO(143, 148, 251, 1)),
                       ),
                       onPressed: _switchAuthMode,
                     )
