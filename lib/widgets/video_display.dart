@@ -5,17 +5,16 @@ import 'package:my_pt/widgets/pullet.dart';
 import 'package:provider/provider.dart';
 import 'package:video_player/video_player.dart';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 
-class Videoo extends StatefulWidget {
-  const Videoo({Key? key}) : super(key: key);
+class VideoDisplay extends StatefulWidget {
+  const VideoDisplay({Key? key}) : super(key: key);
 
   @override
-  State<Videoo> createState() => _VideooState();
+  State<VideoDisplay> createState() => _VideoDisplayState();
 }
 
-class _VideooState extends State<Videoo> {
+class _VideoDisplayState extends State<VideoDisplay> {
   VideoPlayerController? _controller;
   VideoPlayerController? _toBeDisposed;
   double aspectRatio = 16 / 9;
