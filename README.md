@@ -44,9 +44,7 @@ flutter pub get
 
 **Results Sccreen:**
 
-<img src="/images/screenshots/results_screen.jpg" alt="Alt text" title="Demo Sccreen" style="display: inline-block; margin: 0 auto; height: 500px">
-
-<img src="/images/screenshots/results_demo.gif" alt="Alt text" title="Demo Sccreen" style="display: inline-block; margin: 0 auto; height: 500px">
+<img src="/images/screenshots/results_demo.gif" alt="Alt text" title="Demo Sccreen" style="display: inline-block; margin: 0 auto; height: 500px"> | <img src="/images/screenshots/results_screen.jpg" alt="Alt text" title="Demo Sccreen" style="display: inline-block; margin: 0 auto; height: 500px">
 
 ### Libraries & Tools Used
 
