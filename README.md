@@ -32,7 +32,7 @@ flutter pub get
 
 **Sign-in Sccreen:**
 
-<img src="/images/screenshots/signin_screen" alt="Alt text" title="Sign-in Sccreen" style="display: inline-block; margin: 0 auto; height: 500px">
+<img src="/images/screenshots/signin_screen.jpeg" alt="Alt text" title="Sign-in Sccreen" style="display: inline-block; margin: 0 auto; height: 500px">
 
 **Exercises List Sccreen:**
 
@@ -45,8 +45,6 @@ flutter pub get
 **Results Sccreen:**
 
 <img src="/images/screenshots/results_screen.jpg" alt="Alt text" title="Demo Sccreen" style="display: inline-block; margin: 0 auto; height: 500px">
-
-<img src="/images/screenshots/results_demo.mp4" alt="Alt text" title="Demo Sccreen" style="display: inline-block; margin: 0 auto; height: 500px">
 
 ### Libraries & Tools Used
 
