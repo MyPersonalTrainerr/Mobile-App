@@ -5,8 +5,6 @@ import 'package:my_pt/providers/exercises_provider.dart';
 import 'package:my_pt/screens/auth_screen.dart';
 import 'package:my_pt/screens/exercise_demo_screen.dart';
 import 'package:my_pt/screens/exercises_overview.dart';
-import 'package:my_pt/widgets/paint.dart';
-import 'package:my_pt/widgets/video.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -73,11 +71,7 @@ class MyApp extends StatelessWidget {
                 secondary: const Color.fromRGBO(143, 148, 251, .2),
               ),
             ),
-            // home: authData.isAuth ? ExersicesOverviewScreen() : AuthScreen(),
-            // home: ExersicesOverviewScreen(),
-            home: Videoo(),
-            // home: MySpecificPage(),
-            // home: Painter(),
+            home: authData.isAuth ? ExersicesOverviewScreen() : AuthScreen(),
             routes: {
               ExerciseDemoScreen.routeName: (context) => ExerciseDemoScreen(),
             }),
